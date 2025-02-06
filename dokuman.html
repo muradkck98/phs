@@ -74,7 +74,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var url = "src/files/?C=M;O=A"; // Dosya listesini alacağın dizin yolu
+            var url = "./src/files/?C=M;O=A"; // Dosya listesini alacağın dizin yolu
 
             fetch(url)
                 .then(response => response.text())
@@ -116,7 +116,7 @@
                     let linkCell = document.createElement("td");
                     linkCell.classList.add("text-center", "border-end");
                     let link = document.createElement("a");
-                    link.href = "src/files/" + file.fileName; // Tam dosya yolu (src/files/dosya.pdf)
+                    link.href = "./src/files/" + file.fileName; // Tam dosya yolu (src/files/dosya.pdf)
                     link.className = "btn ";
                     link.textContent = "Download";
                     link.setAttribute("download", file.fileName);
